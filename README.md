@@ -1,0 +1,1 @@
+# GOGO Token Contract
