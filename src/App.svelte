@@ -36,9 +36,16 @@
     // await provider.send("eth_requestAccounts", []);
 
     const tokenAddress = "0x5BAbEDD8CAf495909a89162Fc359d6E4a00dEbA3";
-    const contract = new ethers.Contract(tokenAddress, token.abi, provider.getSigner());
+    const contract = new ethers.Contract(
+      tokenAddress,
+      token.abi,
+      provider.getSigner()
+    );
 
-    const transfer = await contract.transfer(transferAddress, transferAmount * 1000000000000);
+    const transfer = await contract.transfer(
+      transferAddress,
+      transferAmount * 1000000000000
+    );
 
     console.log(transfer);
   }
